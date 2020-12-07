@@ -39,3 +39,23 @@
   float: right;
   margin-left: 20px;
 }
+
+.title {
+  float: left;
+  position: absolute;
+  transform: translate(-2%, -1031%);
+  font-weight: bold;
+}
+.status-btn {
+  float: right;
+  transform: translate(-21%, -862%);
+}
+
+.map-section {
+ position: relative;
+}
+
+.orders-section {
+  top: -60px;
+  position: relative;
+}

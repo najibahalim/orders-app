@@ -1,22 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Orders
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+<ion-content class="map-section">
 
-<ion-card>
-  <ion-card-content>
-    <span class="order-title">Shawn Mendes</span>
+  <ion-img class="mapimg" src="assets/mapimg.jpg"></ion-img>
+
+  <ion-title class="title">Orders</ion-title>
+  <ion-button class="status-btn" size="small" color="success" [disabled]="!online" >Online</ion-button>
+  <br/>
+  <br />
+  <ion-button class="status-btn" size="small" color="medium" [disabled]="online" >Offline</ion-button>
+</ion-content>
+
+<ion-content class="orders-section">
+
+<ion-card *ngFor="let order of orders">
+  <ion-card-content >
+    <span class="order-title">{{order.name}}</span>
     <ion-icon  class="title-icon" name="compass" slot="end"></ion-icon>
-    <ion-icon  class="title-icon" name="call" slot="end"></ion-icon>
+    <ion-icon  class="title-icon" name="call" (click)="callNumber(order.phone)" slot="end"></ion-icon>
     <br/>
     <ion-icon class="order-loc" name="location-outline" slot="end"></ion-icon>
-    <span class="order-loc"> Hoboken, NY, USA</span>
-    <ion-button expand="block" color="medium">DELIVERY/RETURN</ion-button>
+    <span class="order-loc"> {{order.address}}</span>
+    <ion-button expand="block" color="light">DELIVERY/RETURN</ion-button>
   </ion-card-content>
 </ion-card>
 </ion-content>
+
