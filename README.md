@@ -8,4 +8,3 @@ ionic serve
 <br><br>
 To create an apk: <br>
 ionic cordova build --android<br>
-ionic cordova build --ios
