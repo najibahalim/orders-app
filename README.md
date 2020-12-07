@@ -1,6 +1,5 @@
 # orders-app
-
-Ionic Orders APP: 
+Created using Ionic framework
 
 To run this in browser: (Some of mobile native features may not work) <br>
 npm install
